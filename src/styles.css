@@ -1,0 +1,451 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ecf0f1; /* Fondo gris claro */
+    color: #2c3e50; /* Texto principal en gris oscuro */
+}
+
+/* App Container */
+.App {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Menú superior */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #34495e; /* Fondo azul marino */
+    color: #ffffff; /* Texto blanco */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px; /* Fijar una altura del menú */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo y título */
+.header-left h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1c40f; /* Amarillo dorado */
+}
+
+/* User info y logout */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right span {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #f1c40f; /* Amarillo dorado */
+}
+
+/* Logout button */
+.logout-button {
+    background-color: #f1c40f; /* Amarillo dorado */
+    color: #2c3e50; /* Texto en gris oscuro */
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d4ac0d; /* Amarillo más oscuro */
+}
+
+/* Contenedor del chatbot */
+.Chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 70px; /* Asegura que el chat esté debajo del menú */
+    padding: 20px 20px;
+    height: calc(100vh - 70px); /* Restar la altura del menú para evitar superposición */
+    background-color: #ecf0f1; /* Fondo gris claro */
+}
+
+/* Chatbot */
+.Chatbot {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px;
+    padding: 20px;
+    width: 40%;
+    max-width: 600px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Chat e historial */
+.chat-history {
+    background-color: #ecf0f1; /* Fondo gris claro */
+    border-radius: 10px;
+    padding: 15px;
+    height: 350px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Mensajes del usuario y del bot */
+.user-message {
+    text-align: right;
+    margin-bottom: 10px;
+    color: #3498db; /* Azul más claro para el usuario */
+    font-style: italic;
+}
+
+.bot-message {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #34495e; /* Azul marino para el bot */
+}
+
+/* Entrada de texto y botones del chat */
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 85%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #bdc3c7; /* Borde gris claro */
+    outline: none;
+    margin-right: 10px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #34495e; /* Texto azul marino */
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #3498db; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+/* Efecto de escritura del bot */
+.bot-typing {
+    font-style: italic;
+    color: #7f8c8d; /* Gris claro */
+    margin-bottom: 10px;
+}
+
+/* Botones de Ubicación y Carta */
+.ubicacion-button, .carta-button {
+    background-color: #f1c40f; /* Amarillo dorado */
+    color: #34495e; /* Texto en azul marino */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ubicacion-button:hover, .carta-button:hover {
+    background-color: #d4ac0d; /* Amarillo más oscuro */
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Flex container for sections */
+.modal-sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Section styles */
+.categorias-section, .productos-section, .resumen-section {
+    flex: 1;
+    background-color: #ecf0f1; /* Fondo gris claro */
+    border-radius: 5px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Botones de categoría y productos */
+.categoria-button, .producto-button {
+    background-color: #3498db; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+.categoria-button:hover, .producto-button:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+/* Modal footer buttons */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cancel-button {
+    background-color: #cc2e2e; /* Verde */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #701414; /* Verde más oscuro */
+}
+
+.realizar-pedido-button {
+    background-color: #6cb825; /* Verde */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.realizar-pedido-button:hover {
+    background-color: #476b19; /* Verde más oscuro */
+}
+/* Spinner */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    z-index: 1002;
+}
+
+.spinner-circle {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db; /* Azul */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Spinner text */
+.spinner-overlay p {
+    margin-top: 20px;
+    color: #ffffff; /* Texto blanco */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Payment input styles */
+.payment-input {
+    margin: 10px 0;
+    padding: 12px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    background-color: #ffffff;
+    color: #34495e;
+}
+
+/* Estilo de mapa */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+}
+
+/* Estilo de mensajes de alerta */
+.alert {
+    color: #e74c3c; /* Rojo para alertas */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilos de la información del pedido */
+.pedido-info {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    z-index: 1000;
+    color: #2c3e50; /* Texto gris oscuro */
+}
+
+.pedido-info h3 {
+    margin-bottom: 10px;
+}
+
+.pedido-info a {
+    color: #3498db; /* Azul */
+    text-decoration: underline;
+}
+
+/* Botones de productos y categorías */
+ul.categorias-list,
+ul.productos-list,
+ul.resumen-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}
+
+/* --------------------------------------------- */
+/* Media Queries para adaptar el diseño a móviles */
+/* --------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Adaptación del menú */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .header-left h1 {
+        font-size: 20px;
+    }
+
+    .header-right span {
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+    .logout-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Adaptación del chatbot */
+    .Chatbot-container {
+        padding: 20px;
+        height: auto; /* Para que el contenido sea flexible en móviles */
+    }
+
+    .Chatbot {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .chat-history {
+        height: 250px;
+        font-size: 12px;
+    }
+
+    .chat-input input[type="text"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Adaptación de modales */
+    .modal-sections {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .categorias-section, .productos-section, .resumen-section {
+        max-height: 200px;
+        padding: 10px;
+    }
+
+    /* Adaptación de la información del pedido */
+    .pedido-info {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        box-shadow: none;
+        right: 0;
+        top: 0;
+    }
+}

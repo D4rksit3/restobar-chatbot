@@ -1,0 +1,42 @@
+restobar/
+│
+├── core/
+│   ├── Controller.php
+│   ├── Model.php
+│   ├── View.php
+│   └── Database.php
+│
+├── models/
+│   ├── User.php
+│   ├── Pedido.php
+│   ├── Producto.php
+│   └── Venta.php
+│
+├── controllers/
+│   ├── AuthController.php
+│   ├── MozoController.php
+│   ├── CocineroController.php
+│   ├── AdminController.php
+│
+├── views/
+│   ├── login.php
+│   ├── mozo/
+│   │   ├── pedidos.php
+│   │   └── estado.php
+|   |   |__ generarBoleta.php
+│   ├── cocinero/
+│   │   └── pedidos.php
+|   |
+│   ├── admin/
+│   │   ├── ventas.php
+│   │   ├── agregar.php
+│   │   └── graficas.php
+│   └── layouts/
+│       └── header.php
+│       └── footer.php
+│
+├── public/
+│   └── index.php
+│
+├── .htaccess
+└── config.php
