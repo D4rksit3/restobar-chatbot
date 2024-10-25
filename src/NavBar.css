@@ -1,0 +1,75 @@
+/* NavBar.css */
+/* Estilo para el contenedor del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y el icono de usuario */
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #797979;
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el navbar esté encima de todo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título del sitio */
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo para el icono de usuario */
+.user-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del icono */
+    right: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    z-index: 1001;
+}
+
+/* Estilo para los botones del menú desplegable */
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Efecto hover para los botones */
+.dropdown-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Añadir margen superior a los botones excepto el primero */
+.dropdown-menu button + button {
+    margin-top: 0.5rem;
+}
+
+/* Para que el contenido no se vea afectado por el navbar fijo */
+.content {
+    padding-top: 80px; /* Ajustar según la altura del navbar */
+}

@@ -1,0 +1,46 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Ajusta el ancho según tus necesidades */
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.chat-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  padding: 10px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-list {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.orders-list h3 {
+  margin: 0 0 5px 0;
+}
